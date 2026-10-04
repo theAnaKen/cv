@@ -49,6 +49,7 @@
   --font-primary: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   --font-heading: 'Outfit', sans-serif;
   --font-handwriting: 'Caveat', cursive;
+  --font-calligraphy: 'Great Vibes', 'Alex Brush', cursive;
 
   /* Shadows */
   --shadow-sm: 0 2px 6px rgba(16, 42, 67, 0.05);
@@ -323,6 +324,7 @@ ul {
   0% {
     transform: scale(0.98);
   }
+
   100% {
     transform: scale(1.01);
   }
@@ -357,13 +359,23 @@ ul {
 }
 
 @keyframes heroSpin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes heroSpinReverse {
-  0% { transform: rotate(360deg); }
-  100% { transform: rotate(0deg); }
+  0% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 .hero-loader-text {
@@ -398,10 +410,12 @@ ul {
   0% {
     left: -45%;
   }
+
   50% {
     left: 35%;
     width: 55%;
   }
+
   100% {
     left: 100%;
     width: 25%;
@@ -1031,6 +1045,42 @@ ul {
   color: var(--text-muted);
   font-weight: 600;
   margin-bottom: -0.25rem;
+}
+
+/* Artistic Calligraphy Golden Name */
+.about-name-artistic {
+  font-family: var(--font-calligraphy), cursive;
+  font-size: 4.4rem;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  padding: 0.15rem 0;
+  display: inline-block;
+  background: linear-gradient(135deg, #FFE885 0%, #F6C453 35%, #EDA821 70%, #C97D0A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: var(--accent-gold);
+  filter: drop-shadow(0 2px 14px rgba(246, 196, 83, 0.45));
+  transform: rotate(-1.5deg);
+  transform-origin: left bottom;
+  margin-top: -0.35rem;
+  margin-bottom: 0.25rem;
+  transition: transform var(--transition-fast), filter var(--transition-fast);
+}
+
+.about-name-artistic:hover {
+  transform: rotate(0deg) scale(1.03);
+  filter: drop-shadow(0 4px 22px rgba(246, 196, 83, 0.65));
+}
+
+[data-theme="light"] .about-name-artistic {
+  background: linear-gradient(135deg, #E59F1A 0%, #C57D08 45%, #995B00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: #C57D08;
+  filter: drop-shadow(0 2px 8px rgba(197, 125, 8, 0.25));
 }
 
 .about-text {
@@ -2240,6 +2290,11 @@ a.credential-item:hover {
     font-size: 2.6rem;
   }
 
+  .about-name-artistic {
+    font-size: 3.3rem;
+    transform: none;
+  }
+
   /* Section 3: About & Skills for Mobile (Single column stacked) */
   .about-card-wrapper {
     display: flex;
@@ -2382,6 +2437,10 @@ a.credential-item:hover {
 
   .title-large {
     font-size: 2.1rem;
+  }
+
+  .about-name-artistic {
+    font-size: 2.5rem;
   }
 
   .btn-primary,
