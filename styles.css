@@ -2360,3 +2360,76 @@ a.credential-item:hover {
     font-size: 0.85rem;
   }
 }
+
+/* ==========================================================================
+   SCROLL-BASED ANIMATIONS & READING PROGRESS
+   ========================================================================== */
+
+/* ── Reading Progress Indicator on Navbar ── */
+.scroll-progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--accent), var(--accent-gold));
+  box-shadow: 0 0 10px rgba(91, 140, 255, 0.45);
+  transition: width 0.08s ease-out;
+  z-index: 105;
+  pointer-events: none;
+}
+
+/* ── Core Scroll Reveal Engine ── */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.scroll-reveal.reveal-left {
+  transform: translateX(-36px);
+}
+
+.scroll-reveal.reveal-right {
+  transform: translateX(36px);
+}
+
+.scroll-reveal.reveal-scale {
+  transform: scale(0.92) translateY(24px);
+}
+
+/* Revealed Active State */
+.scroll-reveal.is-revealed {
+  opacity: 1;
+  transform: translate(0, 0) scale(1);
+}
+
+/* Stagger Delays */
+.delay-100 { transition-delay: 0.1s; }
+.delay-200 { transition-delay: 0.2s; }
+.delay-300 { transition-delay: 0.3s; }
+.delay-400 { transition-delay: 0.4s; }
+.delay-500 { transition-delay: 0.5s; }
+
+/* Timeline Smooth Marker Expansion */
+.timeline-item.is-revealed .timeline-marker {
+  box-shadow: 0 0 0 4px var(--surface), 0 0 14px var(--accent-gold);
+}
+
+/* Accessibility: User Motion Preferences */
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal,
+  .scroll-reveal.reveal-left,
+  .scroll-reveal.reveal-right,
+  .scroll-reveal.reveal-scale {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .scroll-progress-bar {
+    display: none;
+  }
+}

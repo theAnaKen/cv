@@ -268,4 +268,47 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+
+
+  // --------------------------------------------------------------------------
+  // 7. Scroll-Based Reveal Animations (IntersectionObserver)
+  // --------------------------------------------------------------------------
+  const revealElements = document.querySelectorAll('.scroll-reveal');
+  
+  if ('IntersectionObserver' in window && revealElements.length > 0) {
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-revealed');
+          // Once revealed, keep in place and stop observing
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      root: null,
+      rootMargin: '0px 0px -40px 0px',
+      threshold: 0.1
+    });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+  } else {
+    revealElements.forEach(el => el.classList.add('is-revealed'));
+  }
+
+  // --------------------------------------------------------------------------
+  // 8. Sticky Navbar Scroll Reading Progress Bar
+  // --------------------------------------------------------------------------
+  const scrollProgressBar = document.getElementById('scrollProgressBar');
+  if (scrollProgressBar) {
+    const updateScrollProgress = () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      scrollProgressBar.style.width = `${Math.min(100, Math.max(0, progress))}%`;
+    };
+
+    window.addEventListener('scroll', updateScrollProgress, { passive: true });
+    updateScrollProgress();
+  }
+
 });
