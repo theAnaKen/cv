@@ -215,6 +215,10 @@ ul {
   align-items: center;
 }
 
+.nl-wrap {
+  display: none;
+}
+
 /* Buttons */
 .btn {
   display: inline-flex;
