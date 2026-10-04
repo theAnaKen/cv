@@ -271,23 +271,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   // --------------------------------------------------------------------------
-  // 7. Scroll-Based Reveal Animations (IntersectionObserver)
+  // 7. Scroll-Based Reveal Animations (Reversible on Scroll Up)
   // --------------------------------------------------------------------------
   const revealElements = document.querySelectorAll('.scroll-reveal');
   
   if ('IntersectionObserver' in window && revealElements.length > 0) {
-    const revealObserver = new IntersectionObserver((entries, observer) => {
+    const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('is-revealed');
-          // Once revealed, keep in place and stop observing
-          observer.unobserve(entry.target);
+        } else {
+          // Reverses animation when scrolling up/out of view
+          entry.target.classList.remove('is-revealed');
         }
       });
     }, {
       root: null,
       rootMargin: '0px 0px -40px 0px',
-      threshold: 0.1
+      threshold: 0.12
     });
 
     revealElements.forEach(el => revealObserver.observe(el));
