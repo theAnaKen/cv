@@ -4,6 +4,41 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   
+  // -1. Hero Image Preloader & Loading Animation
+  const heroLoader = document.getElementById('heroLoader');
+  if (heroLoader) {
+    function getHeroImageSrc() {
+      const width = window.innerWidth;
+      if (width <= 300) return './images/2/300px phone.png';
+      if (width <= 600) return './images/2/phone.png';
+      if (width <= 900) return './images/2/900px.png';
+      if (width <= 1060) return './images/2/tab.png';
+      return './images/2/1st home page.png';
+    }
+
+    const heroImg = new Image();
+    heroImg.src = getHeroImageSrc();
+
+    let dismissed = false;
+    const hideHeroLoader = () => {
+      if (dismissed) return;
+      dismissed = true;
+      heroLoader.classList.add('fade-out');
+      setTimeout(() => {
+        heroLoader.style.display = 'none';
+      }, 520);
+    };
+
+    if (heroImg.complete) {
+      hideHeroLoader();
+    } else {
+      heroImg.addEventListener('load', hideHeroLoader);
+      heroImg.addEventListener('error', hideHeroLoader);
+      // Fallback timeout so loader never hangs
+      setTimeout(hideHeroLoader, 4000);
+    }
+  }
+
   // 0. Theme Toggle (Dark theme by default)
   const themeToggleBtn = document.getElementById('themeToggleBtn');
   const storedTheme = localStorage.getItem('portfolio-theme');
