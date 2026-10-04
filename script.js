@@ -67,12 +67,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // 1. Scroll Indicator Click Handler
   const scrollIndicatorBtn = document.getElementById('scrollIndicatorBtn');
   const stickyNavbar = document.getElementById('stickyNavbar');
-  const aboutSection = document.getElementById('about');
+  const skillsSection = document.getElementById('skills');
 
   if (scrollIndicatorBtn) {
     scrollIndicatorBtn.addEventListener('click', () => {
-      if (aboutSection) {
-        aboutSection.scrollIntoView({ behavior: 'smooth' });
+      if (skillsSection) {
+        skillsSection.scrollIntoView({ behavior: 'smooth' });
       }
     });
   }
@@ -82,7 +82,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const activeSections = new Set();
   
   const targetMap = [
-    { id: 'about-sub-target', key: 'about' },
     { id: 'skills', key: 'skills' },
     { id: 'education', key: 'education' },
     { id: 'co-curricular', key: 'co-curricular' },
