@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anubhav — Portfolio & CV Website</title>
+  <meta name="description"
+    content="Portfolio of Anubhav, IMBA Student at BIT Mesra. Interested in Marketing Strategy, Consumer Behaviour, Economics, and Market Research.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Scroll Snapping Container -->
+  <div class="main-snap-container">
+
+    <!-- ==================== SECTION 2: HERO LANDING PAGE ==================== -->
+    <section id="hero" class="hero-section snap-section">
+
+      <!-- Scroll Indicator -->
+      <div class="scroll-indicator" id="scrollIndicatorBtn">
+        <span class="scroll-text"></span>
+        <div class="mouse-icon">
+          <div class="wheel"></div>
+        </div>
+        <svg class="chevron-down" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </div>
+
+    </section>
+
+    <!-- ==================== SECTION 1: STICKY NAVIGATION BAR ==================== -->
+    <header class="navbar-wrapper" id="stickyNavbar">
+      <div class="nav-container">
+        <a href="#hero" class="nav-brand">
+          <span class="brand-avatar">A</span>
+          <span class="brand-name">Anubhav</span>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="nav-menu" id="navMenu">
+          <ul class="nav-links">
+            <li><a href="#about" class="nav-link" data-section="about">About me</a></li>
+            <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+            <li><a href="#education" class="nav-link" data-section="education">Education</a></li>
+            <li><a href="#co-curricular" class="nav-link" data-section="co-curricular">Co - curricular</a></li>
+            <li><a href="#interests" class="nav-link" data-section="interests">interests</a></li>
+            <li><a href="#contact" class="nav-link" data-section="contact">contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Right Side Theme Toggle -->
+        <div class="nav-actions">
+          <!-- Light / Dark Theme Toggle Button -->
+          <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle light and dark theme"
+            title="Toggle theme">
+            <svg class="theme-icon moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+            <svg class="theme-icon sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </button>
+
+          <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Content Sections Wrapper -->
+    <main class="content-flow">
+
+      <!-- ==================== SECTION 3: ABOUT ME & SKILLS ==================== -->
+      <section id="about" class="page-section section-split-3">
+        <div class="container">
+          <div class="grid-2-col">
+
+            <!-- Left Side: About Me -->
+            <div class="about-card-wrapper" id="about-sub-target">
+              <div class="about-intro">
+                <div class="section-tag">ABOUT ME</div>
+                <h3 class="sub-greeting">Hi I'am</h3>
+                <h2 class="section-title title-large">Anubhav</h2>
+              </div>
+
+              <div class="about-photo-frame">
+                <img src="./images/3/photo.jpg" alt="Anubhav Profile Photo" class="about-photo">
+                <div class="photo-accent-border"></div>
+              </div>
+
+              <p class="about-text">
+                An IMBA student at BIT Mesra who enjoys understanding what drives customers and how brands create
+                meaningful connections with their audience. I have a keen interest in marketing strategy, consumer
+                behaviour, market research, economics, and brand communication.
+              </p>
+            </div>
+
+            <!-- Right Side: Skills -->
+            <div class="skills-card-wrapper" id="skills">
+              <div class="skills-header">
+                <div class="section-tag">MY EXPERTISE</div>
+                <h2 class="section-title">SKILLS</h2>
+              </div>
+
+              <div class="skills-sub-grid">
+
+                <!-- Hard Skills -->
+                <div class="skill-category-box hard-skills">
+                  <div class="category-header">
+                    <div class="category-icon">
+                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="16 18 22 12 16 6"></polyline>
+                        <polyline points="8 6 2 12 8 18"></polyline>
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 class="category-title">Hard Skills</h3>
+                      <span class="category-subtitle">( Technical skills )</span>
+                    </div>
+                  </div>
+
+                  <div class="skills-list">
+                    <!-- MS Excel -->
+                    <div class="skill-item">
+                      <div class="skill-logo excel-logo">
+                        <svg viewBox="0 0 32 32" width="28" height="28">
+                          <rect x="2" y="4" width="28" height="24" rx="4" fill="#107C41" />
+                          <line x1="14" y1="9" x2="14" y2="25" stroke="#fff" stroke-width="1.5" stroke-opacity="0.45" />
+                          <line x1="5" y1="15" x2="27" y2="15" stroke="#fff" stroke-width="1.5" stroke-opacity="0.45" />
+                          <line x1="5" y1="20" x2="27" y2="20" stroke="#fff" stroke-width="1.5" stroke-opacity="0.45" />
+                          <text x="4" y="13" font-family="Arial" font-size="7" font-weight="800" fill="#fff">XLS</text>
+                          <rect x="5" y="16.5" width="7" height="2" rx="1" fill="#fff" opacity="0.75" />
+                          <rect x="5" y="21.5" width="5" height="2" rx="1" fill="#fff" opacity="0.6" />
+                          <rect x="15" y="16.5" width="11" height="2" rx="1" fill="#fff" opacity="0.75" />
+                          <rect x="15" y="21.5" width="8" height="2" rx="1" fill="#fff" opacity="0.6" />
+                        </svg>
+                      </div>
+                      <div class="skill-info">
+                        <span class="skill-name">MS Excel</span>
+                        <span class="skill-level level-advanced">Advanced</span>
+                      </div>
+                    </div>
+
+                    <!-- MS PowerPoint -->
+                    <div class="skill-item">
+                      <div class="skill-logo ppt-logo">
+                        <svg viewBox="0 0 32 32" width="28" height="28">
+                          <rect x="2" y="4" width="28" height="24" rx="4" fill="#C43E1C" />
+                          <rect x="5" y="8" width="22" height="13" rx="2" fill="#fff" opacity="0.2" />
+                          <rect x="7" y="10" width="14" height="2.5" rx="1" fill="#fff" opacity="0.9" />
+                          <rect x="7" y="14" width="10" height="1.8" rx="0.9" fill="#fff" opacity="0.6" />
+                          <rect x="7" y="17" width="7" height="1.8" rx="0.9" fill="#fff" opacity="0.6" />
+                          <line x1="16" y1="21" x2="16" y2="25" stroke="#fff" stroke-width="1.5" stroke-opacity="0.7" />
+                          <line x1="12" y1="25" x2="20" y2="25" stroke="#fff" stroke-width="1.5" stroke-opacity="0.7" />
+                        </svg>
+                      </div>
+                      <div class="skill-info">
+                        <span class="skill-name">MS Powerpoint</span>
+                        <span class="skill-level level-intermediate">Intermediate</span>
+                      </div>
+                    </div>
+
+                    <!-- MS Word -->
+                    <div class="skill-item">
+                      <div class="skill-logo word-logo">
+                        <svg viewBox="0 0 32 32" width="28" height="28">
+                          <rect x="2" y="4" width="28" height="24" rx="4" fill="#185ABD" />
+                          <rect x="7" y="7" width="14" height="18" rx="1.5" fill="#fff" opacity="0.18" />
+                          <path d="M17 7 L21 11 L17 11 Z" fill="#fff" opacity="0.5" />
+                          <rect x="9" y="13" width="10" height="1.8" rx="0.9" fill="#fff" opacity="0.85" />
+                          <rect x="9" y="16.5" width="8" height="1.8" rx="0.9" fill="#fff" opacity="0.7" />
+                          <rect x="9" y="20" width="6" height="1.8" rx="0.9" fill="#fff" opacity="0.55" />
+                          <text x="21" y="27" font-family="Arial" font-size="9" font-weight="900" fill="#fff"
+                            opacity="0.9">W</text>
+                        </svg>
+                      </div>
+                      <div class="skill-info">
+                        <span class="skill-name">MS Word</span>
+                        <span class="skill-level level-advanced">Advanced</span>
+                      </div>
+                    </div>
+
+                    <!-- Tally Prime -->
+                    <div class="skill-item">
+                      <div class="skill-logo tally-logo">
+                        <svg viewBox="0 0 32 32" width="28" height="28">
+                          <rect x="2" y="4" width="28" height="24" rx="4" fill="#005A9E" />
+                          <rect x="8" y="7" width="16" height="18" rx="2" fill="#fff" opacity="0.15" />
+                          <rect x="10" y="9" width="12" height="5" rx="1" fill="#fff" opacity="0.7" />
+                          <rect x="10" y="16" width="3" height="2.5" rx="0.6" fill="#fff" opacity="0.6" />
+                          <rect x="14.5" y="16" width="3" height="2.5" rx="0.6" fill="#fff" opacity="0.6" />
+                          <rect x="19" y="16" width="3" height="2.5" rx="0.6" fill="#FFC805" opacity="0.9" />
+                          <rect x="10" y="19.5" width="3" height="2.5" rx="0.6" fill="#fff" opacity="0.6" />
+                          <rect x="14.5" y="19.5" width="3" height="2.5" rx="0.6" fill="#fff" opacity="0.6" />
+                          <rect x="19" y="19.5" width="3" height="2.5" rx="0.6" fill="#FFC805" opacity="0.9" />
+                        </svg>
+                      </div>
+                      <div class="skill-info">
+                        <span class="skill-name">Tally Prime</span>
+                        <span class="skill-level level-basic">Basic</span>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="skill-category-box soft-skills">
+                  <div class="category-header">
+                    <div class="category-icon icon-amber">
+                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 class="category-title">Soft Skills</h3>
+                      <span class="category-subtitle">( Professional skills )</span>
+                    </div>
+                  </div>
+
+                  <div class="skills-list">
+                    <!-- Communication -->
+                    <div class="skill-item">
+                      <div class="skill-logo soft-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                          stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                      </div>
+                      <div class="skill-info">
+                        <span class="skill-name">Communication</span>
+                        <span class="skill-pill">Effective & Clear</span>
+                      </div>
+                    </div>
+
+                    <!-- PPT Presentation -->
+                    <div class="skill-item">
+                      <div class="skill-logo soft-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                          stroke-linecap="round" stroke-linejoin="round">
+                          <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                          <line x1="8" y1="21" x2="16" y2="21"></line>
+                          <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                      </div>
+                      <div class="skill-info">
+                        <span class="skill-name">PPT Presentation</span>
+                        <span class="skill-pill">Visual Storytelling</span>
+                      </div>
+                    </div>
+
+                    <!-- Teamwork -->
+                    <div class="skill-item">
+                      <div class="skill-logo soft-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                          stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                          <circle cx="9" cy="7" r="4"></circle>
+                          <circle cx="19" cy="11" r="3"></circle>
+                          <path d="M19 14a4 4 0 0 1 3 3.5V21"></path>
+                        </svg>
+                      </div>
+                      <div class="skill-info">
+                        <span class="skill-name">Teamwork</span>
+                        <span class="skill-pill">Collaborative</span>
+                      </div>
+                    </div>
+
+                    <!-- Time Management -->
+                    <div class="skill-item">
+                      <div class="skill-logo soft-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                          stroke-linecap="round" stroke-linejoin="round">
+                          <circle cx="12" cy="12" r="10"></circle>
+                          <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                      </div>
+                      <div class="skill-info">
+                        <span class="skill-name">Time Management</span>
+                        <span class="skill-pill">Deadline Driven</span>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== SECTION 4: EDUCATION ==================== -->
+      <section id="education" class="page-section section-education">
+        <div class="container">
+          <div class="section-header center-text">
+            <span class="section-tag">ACADEMIC BACKGROUND</span>
+            <h2 class="section-title">Education</h2>
+            <div class="title-underline"></div>
+          </div>
+
+          <div class="education-grid">
+
+            <!-- Card 1: BIT Mesra -->
+            <div class="edu-card">
+              <div class="edu-logo-wrapper">
+                <img src="./images/4/bit.png" alt="BIT Mesra Logo" class="edu-logo">
+              </div>
+              <div class="edu-content">
+                <h3 class="edu-institution">BIT Mesra</h3>
+                <h4 class="edu-degree">IMBA (expected 2025 - 2030)</h4>
+                <div class="edu-score-badge highlight">
+                  <span class="score-label">CGPA :</span>
+                  <span class="score-val">8.7</span>
+                </div>
+              </div>
+              <div class="edu-card-footer">
+                <span class="edu-location">Ranchi, Jharkhand</span>
+              </div>
+            </div>
+
+            <!-- Card 2: Jawahar Vidya Mandir -->
+            <div class="edu-card">
+              <div class="edu-logo-wrapper">
+                <img src="./images/4/JVM.png" alt="Jawahar Vidya Mandir Logo" class="edu-logo">
+              </div>
+              <div class="edu-content">
+                <h3 class="edu-institution">Jawahar Vidya Mandir</h3>
+                <h4 class="edu-degree">12th (CBSE) (2025)</h4>
+                <div class="edu-score-badge highlight">
+                  <span class="score-label">Score :</span>
+                  <span class="score-val">88%</span>
+                </div>
+              </div>
+              <div class="edu-card-footer">
+                <span class="edu-location">Shyamali, Ranchi</span>
+              </div>
+            </div>
+
+            <!-- Card 3: Kairali School -->
+            <div class="edu-card">
+              <div class="edu-logo-wrapper">
+                <img src="./images/4/kairali.png" alt="Kairali School Logo" class="edu-logo">
+              </div>
+              <div class="edu-content">
+                <h3 class="edu-institution">Kairali School</h3>
+                <h4 class="edu-degree">Till 10th (CBSE) (2023)</h4>
+                <div class="edu-score-badge highlight">
+                  <span class="score-label">Score :</span>
+                  <span class="score-val">90.4%</span>
+                </div>
+              </div>
+              <div class="edu-card-footer">
+                <span class="edu-location">HEC Colony, Ranchi</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== SECTION 5: CO-CURRICULAR ==================== -->
+      <section id="co-curricular" class="page-section section-experience">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">EXPERIENCE & ACTIVITIES</span>
+            <h2 class="section-title">Co - curricular</h2>
+            <div class="title-underline"></div>
+          </div>
+
+          <div class="timeline-container">
+
+            <!-- Timeline Item 1 -->
+            <div class="timeline-item">
+              <div class="timeline-year-badge">
+                <span>2026</span>
+              </div>
+              <div class="timeline-marker"></div>
+              <div class="timeline-content-card">
+                <div class="timeline-header">
+                  <div>
+                    <h3 class="timeline-title">Internico'26</h3>
+                    <span class="timeline-role-badge">Volunteer</span>
+                  </div>
+                  <span class="timeline-date">24 September 2026</span>
+                </div>
+
+                <ul class="timeline-bullet-list">
+                  <li>Organised By The Academic Forum (TAF)</li>
+                  <li>Organised at The Department Of Management at BIT Mesra</li>
+                  <li>Held on 24 September 2026</li>
+                </ul>
+
+                <div class="timeline-card-action">
+                  <button class="btn-certificate" data-certificate="./images/5/internico.jpg" data-title="Internico'26 Certificate" aria-label="View Certificate for Internico'26">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                      <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                      <polyline points="21 15 16 10 5 21"></polyline>
+                    </svg>
+                    <span>View Certificate</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Timeline Item 2 -->
+            <div class="timeline-item">
+              <div class="timeline-year-badge">
+                <span>2026</span>
+              </div>
+              <div class="timeline-marker"></div>
+              <div class="timeline-content-card">
+                <div class="timeline-header">
+                  <div>
+                    <h3 class="timeline-title">BTRIX'25</h3>
+                    <span class="timeline-role-badge badge-accent">Participant</span>
+                  </div>
+                  <span class="timeline-award-tag">🏆 Title: "Brand Weaver"</span>
+                </div>
+
+                <ul class="timeline-bullet-list">
+                  <li>The Event of the Department of Management at BIT Mesra</li>
+                  <li>Earned the title of <strong>“Brand Weaver”</strong> in MAD SQUAD</li>
+                  <li>Earned the title because of the unique idea</li>
+                  <li>A recognition of our team’s creativity, collaboration, and ability to deliver under pressure.</li>
+                </ul>
+
+                <div class="timeline-card-action">
+                  <button class="btn-certificate" data-certificate="./images/5/internico.jpg" data-title="BTRIX'25 Certificate" aria-label="View Certificate for BTRIX'25">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                      <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                      <polyline points="21 15 16 10 5 21"></polyline>
+                    </svg>
+                    <span>View Certificate</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== SECTION 6: INTERESTS & CONTACT ==================== -->
+      <section id="interests-and-contact" class="page-section section-split-6">
+        <div class="container">
+          <div class="grid-2-col-equal">
+
+            <!-- Left Side: Interests -->
+            <div class="interests-card-wrapper" id="interests">
+              <div class="section-header">
+                <span class="section-tag">PASSIONS & DRIVE</span>
+                <h2 class="section-title">Interests</h2>
+                <div class="title-underline"></div>
+              </div>
+
+              <div class="interests-grid">
+
+                <!-- Item 1: Marketing -->
+                <div class="interest-card">
+                  <div class="interest-icon-box">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <path d="m3 11 18-5v12L3 14v-3z"></path>
+                      <path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"></path>
+                    </svg>
+                  </div>
+                  <h3 class="interest-name">Marketing</h3>
+                  <p class="interest-desc">Brand strategy, campaign positioning, and modern audience engagement.</p>
+                </div>
+
+                <!-- Item 2: Economics -->
+                <div class="interest-card">
+                  <div class="interest-icon-box">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="18" y1="20" x2="18" y2="10"></line>
+                      <line x1="12" y1="20" x2="12" y2="4"></line>
+                      <line x1="6" y1="20" x2="6" y2="14"></line>
+                    </svg>
+                  </div>
+                  <h3 class="interest-name">Economics</h3>
+                  <p class="interest-desc">Market mechanics, micro & macro economic factors shaping industries.</p>
+                </div>
+
+                <!-- Item 3: Consumer behavior -->
+                <div class="interest-card">
+                  <div class="interest-icon-box">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                      <circle cx="9" cy="7" r="4"></circle>
+                      <path d="M19 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"></path>
+                      <path d="M22 13a3 3 0 0 0-3-3"></path>
+                    </svg>
+                  </div>
+                  <h3 class="interest-name">Consumer Behavior</h3>
+                  <p class="interest-desc">Analyzing customer decision-making, psychology, and buying patterns.</p>
+                </div>
+
+                <!-- Item 4: Market Research -->
+                <div class="interest-card">
+                  <div class="interest-icon-box">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="11" cy="11" r="8"></circle>
+                      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                      <line x1="11" y1="8" x2="11" y2="14"></line>
+                      <line x1="8" y1="11" x2="14" y2="11"></line>
+                    </svg>
+                  </div>
+                  <h3 class="interest-name">Market Research</h3>
+                  <p class="interest-desc">Data collection, qualitative insights, and competitive benchmarking.</p>
+                </div>
+
+                <!-- Item 5: Business and Market trends -->
+                <div class="interest-card interest-card-wide">
+                  <div class="interest-icon-box">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                      <polyline points="17 6 23 6 23 12"></polyline>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="interest-name">Business and Market Trends</h3>
+                    <p class="interest-desc">Tracking emerging commercial models, digital shifts, and industry
+                      innovations.</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Right Side: Contact -->
+            <div class="contact-card-wrapper" id="contact">
+              <div class="section-header">
+                <span class="section-tag">CONTACT</span>
+                <h2 class="section-title">Let's Connect</h2>
+                <div class="title-underline"></div>
+              </div>
+
+              <p class="contact-intro">
+                I'm always open to exciting opportunities, collaborations or just a good conversation about marketing,
+                economics or new ideas!
+              </p>
+
+              <!-- Aligned Credentials Grid matching wireframe no text.png template -->
+              <div class="credentials-list">
+
+                <!-- Email -->
+                <a href="mailto:theanu13hav@gmail.com" class="credential-item">
+                  <div class="cred-icon-box">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                      <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                  </div>
+                  <div class="cred-details">
+                    <span class="cred-label">Email</span>
+                    <span class="cred-value">theanu13hav@gmail.com</span>
+                  </div>
+                </a>
+
+                <!-- Phone -->
+                <a href="tel:+918969033485" class="credential-item">
+                  <div class="cred-icon-box">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <path
+                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                      </path>
+                    </svg>
+                  </div>
+                  <div class="cred-details">
+                    <span class="cred-label">Phone</span>
+                    <span class="cred-value">+91 8969033485</span>
+                  </div>
+                </a>
+
+                <!-- Location -->
+                <div class="credential-item">
+                  <div class="cred-icon-box">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                  </div>
+                  <div class="cred-details">
+                    <span class="cred-label">Location</span>
+                    <span class="cred-value">Ranchi,Jharkhand, India</span>
+                  </div>
+                </div>
+
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/anu13hav/" target="_blank" rel="noopener noreferrer"
+                  class="credential-item">
+                  <div class="cred-icon-box linkedin-box">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.77a1.62 1.62 0 1 0 0 3.24 1.62 1.62 0 0 0 0-3.24z" />
+                    </svg>
+                  </div>
+                  <div class="cred-details">
+                    <span class="cred-label">LinkedIn</span>
+                    <span class="cred-value">linkedin.com/in/anu13hav</span>
+                  </div>
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Move to Top Button in Corner -->
+        <a href="#hero" class="btn-move-to-top" id="moveToTopBtn" aria-label="Move to top">
+          <span>Move to top</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+          </svg>
+        </a>
+
+      </section>
+
+    </main>
+
+  <!-- Certificate Pop-up Lightbox Modal -->
+  <div class="certificate-modal" id="certificateModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="certificate-backdrop" id="certificateBackdrop"></div>
+    <div class="certificate-dialog">
+      <button class="certificate-close-btn" id="certificateCloseBtn" aria-label="Close certificate">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <div class="certificate-image-wrapper">
+        <img src="./images/5/internico.jpg" alt="Certificate Preview" class="certificate-img" id="certificateImg">
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
