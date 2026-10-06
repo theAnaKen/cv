@@ -1,0 +1,162 @@
+you are to create a portfolio / cv website for me.. 
+the basic instructions are -
+
+### -> section of the web page
+## -> Main heading
+# -> Sub heading
+- -> for text or a new line
+
+--------------------------------------------------
+I have provided the basic wireframe in "./images/wireframe/wireframe no text.png"
+use that as the basic layout
+
+------------------------------------------------------
+### 2 
+this is the main landing page.. make sure it takes the full screen of the user which is 16:9 landscape
+there is some text written on this image.. so make sure not to just use the image but extract the text part and insert it as text
+
+add a small scroll indicator which is subtle and which indicates that the website is to be scrolled.. there sould be snapping so that  when the user scolls, the ###2 part gets out of the frame and just the rest is visible.. well as much can be displayed considering the screen size of the user.
+
+the image to be used is "./images/2/1st home page.png"
+
+use the heading and subheading from the image itself
+just one change.. in the body or the content it says "MBA student" change it to "IMBA student"
+
+------------------------------------------------------------
+ ### 1 
+this is a navbar and after the scroll snap, should be sticky and stay at the top irrespective of weather the user scolls down.. this should also be dynamic and the active part should get BOLD 
+
+the contents for this is
+ ## Anubhav
+ - About me
+ - Skills
+ - Education
+ - Co - curricular
+ - interests
+ - contact
+
+--------------------------------------------------------------
+### 3
+this is the about me section. when in screen, it should get bold in the navbar
+
+# Hi I'am
+## Anubhav
+-An IMBA student at BIT Mesra who enjoys understanding what drives customers and how brands create meaningful connections with their audience. I have a keen interest in marketing strategy, consumer behaviour, market research, economics, and brand communication.
+
+and use the image located at "./3/images/photo.jpg"
+
+there is another section to this part.. the one on the right side of the line
+it is the skills part
+## SKILLS
+
+it is further divided into 2 parts.. they sould be
+
+# Hard Skills ( Technical skills ) and # Soft Skills ( professional skills )
+
+Hard skills sould include
+
+-MS Excel (Advanced)
+-Ms Powerpoint (Intermediate)
+-Ms Word (Advaned)
+-Tally Prime (Basic)
+
+Soft skills should include 
+
+-Communication
+-PPT Presentation
+-Teamwork
+-Time management
+-Emotional Intelligence
+
+here insert logos of softwares by fetching then from the web
+
+use the image at "images/wireframe/Annotated Portfolio Website Wireframe.png" for context and placement
+
+
+
+
+--------------------------------------------------------------------
+
+### 4
+
+This is the education part and thus education should get BOLD in the navbar
+
+here the cards should include 
+
+## BIT Mesra
+# IMBA (expected 2025 - 2030)
+ - CGPA : 
+use the image at "./images/4/bit.png"
+
+## Jawahar Vidya Mandir 
+# 12th (CBSE) (2025)
+-88%
+use the image at "./images/4/JVM.png"
+
+
+## Kairali School
+# till 10th (2023)
+-90.4%
+use the image at "./images/4/kairali.png"
+
+ignore the blue text with the arrow
+-----------------------------------------------------------------------
+### 5
+this is the Co - curricular section 
+
+Here, the 2 timelines shoud be as follows
+
+2026  | ## Internico'26
+	# volunteer
+	- Organised By The Academic Forum(TAF) 
+	- Organised at The Department Of Management at BIT Mesra
+	- Held on 24 September 2026 
+
+	the image will be provided later
+
+2026 | ## BTRIX'25
+	# Participant
+	- The Event of the Department of Management at BIT Mesra
+	- Earned the title of “Brand Weaver” in MAD SQUAD
+	- Earned the title because of the unique idea
+	- A recognition of our team’s creativity, collaboration, and ability to deliver under pressure.
+
+	the image will be provided later
+----------------------------------------------------------------------------------
+### 6
+this again consists of 2 parts..
+for the left part
+
+this is the interests section
+
+so..
+## Interests
+-Marketing
+-Economics
+-Consumer behavior
+-Market Research
+-Business and Market trends
+
+again use suitable images or logos from the web
+
+for the right part.. this is the last and the most important part
+this is the Contact part so..
+# Contact
+## Let's Connect
+-I'm always open to exciting opportunities, collaborations or just a good conversation about marketing, economics or new ideas!
+
+for the credentials use
+
+-theanu13hav@gmail.com
+-+91 8969033485
+-Ranchi, India
+-https://www.linkedin.com/in/anu13hav/
+
+make sure to align the logo with the correct credential using the template "./images/wireframe/wireframe no text.png"
+"
+
+
+
+
+
+

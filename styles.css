@@ -1931,13 +1931,19 @@ a.credential-item:hover {
   margin-top: 1.25rem;
   display: flex;
   justify-content: flex-start;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
 }
 
-.btn-certificate {
+.btn-certificate,
+.btn-linkedin-event {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   padding: 0.55rem 1.15rem;
+  height: 42px;
   background-color: var(--surface);
   color: var(--text-primary);
   border: 1px solid var(--border);
@@ -1945,13 +1951,17 @@ a.credential-item:hover {
   font-family: var(--font-primary);
   font-size: 0.85rem;
   font-weight: 600;
+  text-decoration: none;
   cursor: pointer;
   box-shadow: var(--shadow-sm);
+  box-sizing: border-box;
+  line-height: 1;
   transition: background-color 250ms ease,
     color 250ms ease,
     border-color 250ms ease,
     box-shadow 250ms ease,
     transform var(--transition-fast);
+  flex-shrink: 0;
 }
 
 .btn-certificate:hover {
@@ -1968,6 +1978,51 @@ a.credential-item:hover {
 
 .btn-certificate:hover svg {
   transform: scale(1.1);
+}
+
+/* LinkedIn Event Button - Default (Dark Theme) */
+.btn-linkedin-event {
+  width: 44px;
+  padding: 0;
+  background-color: #0A66C2;
+  border: 1px solid #0A66C2;
+  outline: none;
+  color: #ffffff;
+}
+
+.btn-linkedin-event:hover {
+  background-color: #004182;
+  border-color: #004182;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(10, 102, 194, 0.45);
+}
+
+.btn-linkedin-event svg {
+  fill: currentColor;
+  width: 20px;
+  height: 20px;
+  transition: transform var(--transition-fast);
+}
+
+.btn-linkedin-event:hover svg {
+  transform: scale(1.12);
+}
+
+/* Light Theme: Revert colors (light surface background, LinkedIn blue icon) */
+[data-theme="light"] .btn-linkedin-event {
+  background-color: var(--surface);
+  color: #0A66C2;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+}
+
+[data-theme="light"] .btn-linkedin-event:hover {
+  background-color: #0A66C2;
+  color: #ffffff;
+  border-color: #0A66C2;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(10, 102, 194, 0.35);
 }
 
 /* Lightbox Modal */
@@ -2272,8 +2327,22 @@ a.credential-item:hover {
     gap: 0.5rem;
   }
 
+  .timeline-card-action {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    flex-wrap: wrap;
+  }
+
   .btn-certificate {
-    width: 100%;
+    flex: 1;
+    justify-content: center;
+  }
+
+  .btn-linkedin-event {
+    width: 44px;
+    height: 42px;
+    flex-shrink: 0;
     justify-content: center;
   }
 
@@ -2404,7 +2473,7 @@ a.credential-item:hover {
   opacity: 0;
   transform: translateY(32px);
   transition: opacity 0.5s cubic-bezier(0.25, 1, 0.5, 1),
-              transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
   transition-delay: 0s;
   will-change: opacity, transform;
 }
@@ -2426,15 +2495,29 @@ a.credential-item:hover {
   opacity: 1;
   transform: translate(0, 0) scale(1);
   transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+    transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Stagger Delays when entering */
-.scroll-reveal.is-revealed.delay-100 { transition-delay: 0.1s; }
-.scroll-reveal.is-revealed.delay-200 { transition-delay: 0.2s; }
-.scroll-reveal.is-revealed.delay-300 { transition-delay: 0.3s; }
-.scroll-reveal.is-revealed.delay-400 { transition-delay: 0.4s; }
-.scroll-reveal.is-revealed.delay-500 { transition-delay: 0.5s; }
+.scroll-reveal.is-revealed.delay-100 {
+  transition-delay: 0.1s;
+}
+
+.scroll-reveal.is-revealed.delay-200 {
+  transition-delay: 0.2s;
+}
+
+.scroll-reveal.is-revealed.delay-300 {
+  transition-delay: 0.3s;
+}
+
+.scroll-reveal.is-revealed.delay-400 {
+  transition-delay: 0.4s;
+}
+
+.scroll-reveal.is-revealed.delay-500 {
+  transition-delay: 0.5s;
+}
 
 /* Timeline Smooth Marker Expansion */
 .timeline-item.is-revealed .timeline-marker {
@@ -2443,6 +2526,7 @@ a.credential-item:hover {
 
 /* Accessibility: User Motion Preferences */
 @media (prefers-reduced-motion: reduce) {
+
   .scroll-reveal,
   .scroll-reveal.reveal-left,
   .scroll-reveal.reveal-right,
