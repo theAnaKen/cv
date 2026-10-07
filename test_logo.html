@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logo Comparison: Calligraphy Signature vs Hollow Outlined Text</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root, [data-theme="light"] {
+      --bg: #F8F7F2;
+      --surface: #FFFFFF;
+      --text-primary: #102A43;
+      --text-secondary: #52606D;
+      --navbar-bg: rgba(248, 247, 242, 0.94);
+      --navbar-border: #D9E2EC;
+      --border: #D9E2EC;
+      --accent: #3B6FF5;
+    }
+    [data-theme="dark"] {
+      --bg: #0B1728;
+      --surface: #12243A;
+      --text-primary: #F4F7FB;
+      --text-secondary: #A9B7C8;
+      --navbar-bg: rgba(11, 23, 40, 0.94);
+      --navbar-border: #263B55;
+      --border: #263B55;
+      --accent: #5B8CFF;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text-primary);
+      padding: 40px 20px;
+      transition: background 0.25s ease, color 0.25s ease;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 850px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .header-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+
+    .theme-toggle-btn {
+      padding: 10px 20px;
+      border-radius: 9999px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text-primary);
+      font-family: inherit;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .theme-toggle-btn:hover {
+      border-color: var(--accent);
+      transform: translateY(-1px);
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    }
+
+    .card-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      font-family: 'Outfit', sans-serif;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .badge {
+      font-size: 0.75rem;
+      padding: 4px 10px;
+      border-radius: 9999px;
+      background: rgba(91, 140, 255, 0.15);
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .card-desc {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    .navbar-preview {
+      background: var(--navbar-bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--navbar-border);
+      border-radius: 12px;
+      height: 70px;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* Option 1: Calligraphy Signature Image (navbar.png) */
+    .brand-signature-img {
+      height: 52px;
+      width: auto;
+      max-width: 175px;
+      object-fit: contain;
+      display: block;
+      user-select: none;
+      -webkit-user-drag: none;
+      filter: brightness(1.15) contrast(1.05);
+      transition: filter 250ms ease, transform 200ms ease;
+    }
+
+    [data-theme="light"] .brand-signature-img {
+      filter: brightness(0.18) contrast(1.2);
+    }
+
+    .nav-brand:hover .brand-signature-img {
+      transform: scale(1.04);
+    }
+
+    [data-theme="dark"] .nav-brand:hover .brand-signature-img {
+      filter: brightness(1.3) contrast(1.1) drop-shadow(0 0 10px rgba(246, 196, 83, 0.35));
+    }
+
+    /* Option 2: Hollow Outlined Text (Previous Style) */
+    .brand-avatar-hollow {
+      display: inline-block;
+      font-family: 'Outfit', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke: 1.5px var(--text-primary);
+      line-height: 1;
+      user-select: none;
+      transition: -webkit-text-fill-color 250ms ease,
+        -webkit-text-stroke-color 250ms ease,
+        color 250ms ease,
+        text-shadow 250ms ease,
+        transform 200ms ease;
+    }
+
+    .nav-brand:hover .brand-avatar-hollow {
+      color: #ffffff;
+      -webkit-text-fill-color: #ffffff;
+      -webkit-text-stroke-color: #ffffff;
+      text-shadow: 0 0 14px rgba(255, 255, 255, 0.45);
+      transform: scale(1.03);
+    }
+
+    [data-theme="light"] .nav-brand:hover .brand-avatar-hollow {
+      color: #ffffff;
+      -webkit-text-fill-color: #ffffff;
+      -webkit-text-stroke-color: var(--text-primary);
+      text-shadow: none;
+    }
+
+    /* Subtle Already at Top Bounce Micro-Interaction */
+    @keyframes brandAlreadyTop {
+      0% { transform: translateY(0) scale(1); }
+      25% { transform: translateY(-4px) scale(1.04); }
+      50% { transform: translateY(2px) scale(0.98); }
+      75% { transform: translateY(-1.5px) scale(1.01); }
+      100% { transform: translateY(0) scale(1); }
+    }
+
+    .nav-brand.already-top {
+      animation: brandAlreadyTop 0.52s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    .nav-brand.already-top .brand-avatar-hollow {
+      color: #ffffff;
+      -webkit-text-fill-color: #ffffff;
+      -webkit-text-stroke-color: #ffffff;
+      text-shadow: 0 0 16px rgba(255, 255, 255, 0.65), 0 0 24px rgba(246, 196, 83, 0.45);
+    }
+
+    .nav-brand.already-top .brand-signature-img {
+      filter: brightness(1.35) contrast(1.1) drop-shadow(0 0 14px rgba(246, 196, 83, 0.8));
+    }
+
+    .nav-brand {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .nav-links-mock {
+      display: flex;
+      gap: 20px;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header-bar">
+      <h1>Logo Options: Comparison</h1>
+      <button class="theme-toggle-btn" onclick="toggleTheme()">🌓 Switch Theme (Light / Dark)</button>
+    </div>
+
+    <!-- Option 1: Calligraphy Signature -->
+    <div class="card">
+      <div class="card-title">
+        <span>Option 1: Calligraphy Signature Art (images/wireframe/navbar.png)</span>
+        <span class="badge" style="background: rgba(34, 197, 94, 0.15); color: #22c55e;">Currently Active on Site</span>
+      </div>
+      <div class="card-desc">
+        Handcrafted signature calligraphy with parchment texture and flourishes. In dark mode, it shines in natural ivory/gold. In light mode, an adaptive CSS filter turns it into midnight navy to match the light theme palette.
+      </div>
+      <div class="navbar-preview">
+        <a href="#hero" class="nav-brand">
+          <img src="./images/wireframe/navbar.png" alt="Anubhav" class="brand-signature-img">
+        </a>
+        <div class="nav-links-mock">
+          <span>Skills</span>
+          <span>Education</span>
+          <span>Co-curricular</span>
+          <span>Contact</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Option 2: Hollow Outlined Text -->
+    <div class="card">
+      <div class="card-title">
+        <span>Option 2: Hollow Outlined Typography (The one before)</span>
+        <span class="badge">Previous</span>
+      </div>
+      <div class="card-desc">
+        Modern minimalist outlined typography. The text fill is transparent so the navbar background shows through, with a 1.5px outline rendered in font 'Outfit' (800 weight, 2rem).
+      </div>
+      <div class="navbar-preview">
+        <a href="#hero" class="nav-brand">
+          <span class="brand-avatar-hollow">Anubhav</span>
+        </a>
+        <div class="nav-links-mock">
+          <span>Skills</span>
+          <span>Education</span>
+          <span>Co-curricular</span>
+          <span>Contact</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Light Theme Static Preview -->
+    <h2 style="font-family:'Outfit', sans-serif; font-size:1.4rem; margin-top:20px;">Light Theme Preview</h2>
+    <div class="card" data-theme="light" style="background:#FFFFFF; color:#102A43; border-color:#D9E2EC;">
+      <div class="card-title" style="color:#102A43;">
+        <span>Option 1 (Signature Art in Light Mode)</span>
+      </div>
+      <div class="navbar-preview" style="background:rgba(248, 247, 242, 0.94); border-color:#D9E2EC;">
+        <a href="#hero" class="nav-brand">
+          <img src="./images/wireframe/navbar.png" alt="Anubhav" class="brand-signature-img" style="filter: brightness(0.18) contrast(1.2);">
+        </a>
+        <div class="nav-links-mock" style="color:#52606D;">
+          <span>Skills</span>
+          <span>Education</span>
+          <span>Co-curricular</span>
+          <span>Contact</span>
+        </div>
+      </div>
+
+      <div class="card-title" style="color:#102A43; margin-top: 15px;">
+        <span>Option 2 (Hollow Typography in Light Mode)</span>
+      </div>
+      <div class="navbar-preview" style="background:rgba(248, 247, 242, 0.94); border-color:#D9E2EC;">
+        <a href="#hero" class="nav-brand">
+          <span class="brand-avatar-hollow" style="-webkit-text-stroke: 1.5px #102A43;">Anubhav</span>
+        </a>
+        <div class="nav-links-mock" style="color:#52606D;">
+          <span>Skills</span>
+          <span>Education</span>
+          <span>Co-curricular</span>
+          <span>Contact</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+    }
+
+    let failAudioCtx = null;
+    const playFailSound = () => {
+      try {
+        const AudioCtx = window.AudioContext || window.webkitAudioContext;
+        if (!AudioCtx) return;
+        if (!failAudioCtx) failAudioCtx = new AudioCtx();
+        if (failAudioCtx.state === 'suspended') failAudioCtx.resume();
+        const now = failAudioCtx.currentTime;
+        const master = failAudioCtx.createGain();
+        master.gain.setValueAtTime(0.18, now);
+        master.connect(failAudioCtx.destination);
+
+        const osc1 = failAudioCtx.createOscillator();
+        const gain1 = failAudioCtx.createGain();
+        osc1.type = 'triangle';
+        osc1.frequency.setValueAtTime(220, now);
+        osc1.frequency.exponentialRampToValueAtTime(190, now + 0.12);
+        gain1.gain.setValueAtTime(0.001, now);
+        gain1.gain.linearRampToValueAtTime(0.75, now + 0.02);
+        gain1.gain.exponentialRampToValueAtTime(0.001, now + 0.15);
+        osc1.connect(gain1);
+        gain1.connect(master);
+        osc1.start(now);
+        osc1.stop(now + 0.16);
+
+        const t2 = now + 0.15;
+        const osc2 = failAudioCtx.createOscillator();
+        const gain2 = failAudioCtx.createGain();
+        osc2.type = 'triangle';
+        osc2.frequency.setValueAtTime(160, t2);
+        osc2.frequency.exponentialRampToValueAtTime(125, t2 + 0.38);
+        gain2.gain.setValueAtTime(0.001, t2);
+        gain2.gain.linearRampToValueAtTime(0.8, t2 + 0.03);
+        gain2.gain.exponentialRampToValueAtTime(0.001, t2 + 0.42);
+        osc2.connect(gain2);
+        gain2.connect(master);
+        osc2.start(t2);
+        osc2.stop(t2 + 0.45);
+      } catch (e) {}
+    };
+
+    document.querySelectorAll('.nav-brand').forEach(brand => {
+      brand.addEventListener('click', (e) => {
+        e.preventDefault();
+        brand.classList.remove('already-top');
+        void brand.offsetWidth;
+        brand.classList.add('already-top');
+        playFailSound();
+        setTimeout(() => brand.classList.remove('already-top'), 550);
+      });
+    });
+  </script>
+</body>
+</html>
