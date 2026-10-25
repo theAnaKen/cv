@@ -9,11 +9,11 @@ document.addEventListener('DOMContentLoaded', () => {
   if (heroLoader) {
     function getHeroImageSrc() {
       const width = window.innerWidth;
-      if (width <= 300) return './images/2/300px phone.png';
-      if (width <= 600) return './images/2/phone.png';
-      if (width <= 900) return './images/2/900px.png';
-      if (width <= 1060) return './images/2/tab.png';
-      return './images/2/1st home page.png';
+      if (width <= 300) return './assets/2/300px phone.png';
+      if (width <= 600) return './assets/2/phone.png';
+      if (width <= 900) return './assets/2/900px.png';
+      if (width <= 1060) return './assets/2/tab.png';
+      return './assets/2/1st home page.png';
     }
 
     const heroImg = new Image();
@@ -516,7 +516,7 @@ document.addEventListener('DOMContentLoaded', () => {
   certButtons.forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
-      const certSrc = btn.getAttribute('data-certificate') || './images/5/internico.jpg';
+      const certSrc = btn.getAttribute('data-certificate') || './assets/5/internico.jpg';
       const certTitle = btn.getAttribute('data-title') || 'Certificate';
       openCertificate(certSrc, certTitle);
     });

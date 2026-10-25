@@ -9,9 +9,9 @@
     content="Portfolio of Anubhav, IMBA Student at BIT Mesra. Interested in Marketing Strategy, Consumer Behaviour, Economics, and Market Research.">
 
   <!-- Favicon
-  <link rel="icon" type="image/png" href="./images/wireframe/logo.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/wireframe/favicon.png">
-  <link rel="apple-touch-icon" href="./images/wireframe/favicon.png"> -->
+  <link rel="icon" type="image/png" href="./assets/wireframe/logo.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/wireframe/favicon.png">
+  <link rel="apple-touch-icon" href="./assets/wireframe/favicon.png"> -->
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -62,7 +62,7 @@
       <div class="nav-container">
         <!-- Brand logo: Randomly selects Option 1 (Calligraphy Signature 30%) or Option 2 (Hollow Text 70%) on load -->
         <a href="#hero" class="nav-brand" data-brand-mode="hollow" aria-label="Anubhav - Home">
-          <img src="./images/wireframe/navbar.png" alt="Anubhav" class="brand-signature-img" id="brandSignature">
+          <img src="./assets/wireframe/navbar.png" alt="Anubhav" class="brand-signature-img" id="brandSignature">
           <span class="brand-avatar" id="brandAvatar">Anubhav</span>
         </a>
         <script>
@@ -89,8 +89,33 @@
           </ul>
         </nav>
 
-        <!-- Right Side Theme Toggle -->
+        <!-- Right Side Nav Actions -->
         <div class="nav-actions">
+          <!-- Download CV as PDF Button with PDF Logo -->
+          <a href="./assets/pdf.pdf" download="Anubhav_CV.pdf" target="_blank" rel="noopener noreferrer"
+            class="pdf-download-btn" id="pdfDownloadBtn" aria-label="Download CV as PDF"
+            title="Download CV (PDF)">
+            <svg class="pdf-logo-icon" width="22" height="22" viewBox="0 0 28 32" fill="none"
+              xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <!-- Document body with folded corner -->
+              <path d="M4 2C2.89543 2 2 2.89543 2 4V28C2 29.1046 2.89543 30 4 30H24C25.1046 30 26 29.1046 26 28V9.5L18.5 2H4Z"
+                fill="#DC2626" />
+              <!-- Folded Flap -->
+              <path d="M18.5 2V8.5C18.5 9.05228 18.9477 9.5 19.5 9.5H26L18.5 2Z" fill="#991B1B" />
+              <path d="M18.5 2L26 9.5H19.5C18.9477 9.5 18.5 9.05228 18.5 8.5V2Z" fill="#F87171" opacity="0.4" />
+              <!-- PDF Letters in Crisp Vectors -->
+              <!-- P -->
+              <path d="M6 16.5V23.5M6 16.5H8.7C9.7 16.5 10.5 17.2 10.5 18.2C10.5 19.2 9.7 19.9 8.7 19.9H6"
+                stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+              <!-- D -->
+              <path d="M12.5 16.5V23.5H14.5C16.1 23.5 17.2 22.4 17.2 20C17.2 17.6 16.1 16.5 14.5 16.5H12.5Z"
+                stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+              <!-- F -->
+              <path d="M19.5 16.5V23.5M19.5 16.5H23M19.5 20H22" stroke="#FFFFFF" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+
           <!-- Light / Dark Theme Toggle Button -->
           <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle light and dark theme"
             title="Toggle theme">
@@ -418,7 +443,7 @@
             <!-- Card 1: BIT Mesra -->
             <div class="edu-card scroll-reveal reveal-scale delay-100">
               <div class="edu-logo-wrapper">
-                <img src="./images/4/bit.png" alt="BIT Mesra Logo" class="edu-logo">
+                <img src="./assets/4/bit.png" alt="BIT Mesra Logo" class="edu-logo">
               </div>
               <div class="edu-content">
                 <h3 class="edu-institution">BIT Mesra</h3>
@@ -436,7 +461,7 @@
             <!-- Card 2: Jawahar Vidya Mandir -->
             <div class="edu-card scroll-reveal reveal-scale delay-200">
               <div class="edu-logo-wrapper">
-                <img src="./images/4/JVM.png" alt="Jawahar Vidya Mandir Logo" class="edu-logo">
+                <img src="./assets/4/JVM.png" alt="Jawahar Vidya Mandir Logo" class="edu-logo">
               </div>
               <div class="edu-content">
                 <h3 class="edu-institution">Jawahar Vidya Mandir</h3>
@@ -454,7 +479,7 @@
             <!-- Card 3: Kairali School -->
             <div class="edu-card scroll-reveal reveal-scale delay-300">
               <div class="edu-logo-wrapper">
-                <img src="./images/4/kairali.png" alt="Kairali School Logo" class="edu-logo">
+                <img src="./assets/4/kairali.png" alt="Kairali School Logo" class="edu-logo">
               </div>
               <div class="edu-content">
                 <h3 class="edu-institution">Kairali School</h3>
@@ -506,7 +531,7 @@
                 </ul>
 
                 <div class="timeline-card-action">
-                  <button class="btn-certificate" data-certificate="./images/5/internico.jpg"
+                  <button class="btn-certificate" data-certificate="./assets/5/internico.jpg"
                     data-title="Internico'26 Certificate" aria-label="View Certificate for Internico'26">
                     <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                       stroke-linecap="round" stroke-linejoin="round">
@@ -551,7 +576,7 @@
                 </ul>
 
                 <div class="timeline-card-action">
-                  <button class="btn-certificate" data-certificate="./images/5/btrix.jpeg"
+                  <button class="btn-certificate" data-certificate="./assets/5/btrix.jpeg"
                     data-title="BTRIX'25 Certificate" aria-label="View Certificate for BTRIX'25">
                     <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                       stroke-linecap="round" stroke-linejoin="round">
@@ -776,7 +801,7 @@
           </svg>
         </button>
         <div class="certificate-image-wrapper">
-          <img src="./images/5/internico.jpg" alt="Certificate Preview" class="certificate-img" id="certificateImg">
+          <img src="./assets/5/internico.jpg" alt="Certificate Preview" class="certificate-img" id="certificateImg">
         </div>
       </div>
     </div>

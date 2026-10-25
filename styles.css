@@ -161,13 +161,13 @@ body {
 }
 
 [data-theme="light"] ::selection {
-  background-color: #102A43 !important;
-  color: #F4B942 !important;
+  background-color: rgba(16, 42, 67, 0.15) !important;
+  color: #B45309 !important;
 }
 
 [data-theme="light"] ::-moz-selection {
-  background-color: #102A43 !important;
-  color: #F4B942 !important;
+  background-color: rgba(16, 42, 67, 0.15) !important;
+  color: #B45309 !important;
 }
 
 /* ── Firefox Fallback (Golden Scrollbar for browsers without ::-webkit-scrollbar gradient support) ── */
@@ -407,7 +407,7 @@ p.nl-wrap {
   max-height: 100vh;
   max-height: 100dvh;
   min-height: auto;
-  background-image: url('./images/2/1st home page.png');
+  background-image: url('./assets/2/1st home page.png');
   background-size: contain;
   background-position: center top;
   background-repeat: no-repeat;
@@ -1227,6 +1227,49 @@ p.nl-wrap {
   background-color: var(--primary-navy);
   border-radius: 2px;
   transition: all var(--transition-fast);
+}
+
+/* PDF Download Button (Navbar) */
+.pdf-download-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background-color: var(--surface);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  flex-shrink: 0;
+  text-decoration: none;
+  transition: background-color 250ms ease,
+    border-color 250ms ease,
+    box-shadow 250ms ease,
+    transform 0.2s ease;
+}
+
+.pdf-download-btn:hover {
+  border-color: #DC2626;
+  background-color: rgba(220, 38, 38, 0.1);
+  transform: translateY(-1px) scale(1.05);
+  box-shadow: 0 4px 14px rgba(220, 38, 38, 0.32);
+}
+
+.pdf-download-btn:active {
+  transform: translateY(0) scale(0.96);
+}
+
+.pdf-logo-icon {
+  display: block;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.pdf-download-btn:hover .pdf-logo-icon {
+  transform: scale(1.08);
+  filter: drop-shadow(0 2px 5px rgba(220, 38, 38, 0.4));
 }
 
 /* Theme Toggle Button */
@@ -2429,7 +2472,7 @@ a.credential-item:hover {
 }
 
 /* --------------------------------------------------------------------------
-   12. RESPONSIVE BREAKPOINTS (MATCHING ./images/wireframe/Responsive.png)
+   12. RESPONSIVE BREAKPOINTS (MATCHING ./assets/wireframe/Responsive.png)
    -------------------------------------------------------------------------- */
 
 /* Tablet Breakpoint (max-width: 1060px) - Matched to tab.png (1536x1024, 3:2 landscape) */
@@ -2437,7 +2480,7 @@ a.credential-item:hover {
 
   /* Hero section image for Tablet */
   .hero-section {
-    background-image: url('./images/2/tab.png');
+    background-image: url('./assets/2/tab.png');
     aspect-ratio: 1536 / 1024;
     background-size: contain;
     background-position: center top;
@@ -2504,7 +2547,7 @@ a.credential-item:hover {
 
   /* Hero section image for screens up to 900px */
   .hero-section {
-    background-image: url('./images/2/900px.png');
+    background-image: url('./assets/2/900px.png');
     aspect-ratio: 1095 / 1437;
     background-size: contain;
     background-position: center top;
@@ -2597,7 +2640,7 @@ a.credential-item:hover {
 
   /* Hero section image for Phone */
   .hero-section {
-    background-image: url('./images/2/phone.png');
+    background-image: url('./assets/2/phone.png');
     aspect-ratio: 941 / 1672;
     background-size: contain;
     background-position: center top;
@@ -2752,7 +2795,7 @@ a.credential-item:hover {
 
   /* Hero section image for 300px and below */
   .hero-section {
-    background-image: url('./images/2/300px phone.png');
+    background-image: url('./assets/2/300px phone.png');
     aspect-ratio: 941 / 1672;
     background-size: contain;
     background-position: center top;

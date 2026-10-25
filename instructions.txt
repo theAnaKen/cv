@@ -7,7 +7,7 @@ the basic instructions are -
 - -> for text or a new line
 
 --------------------------------------------------
-I have provided the basic wireframe in "./images/wireframe/wireframe no text.png"
+I have provided the basic wireframe in "./assets/wireframe/wireframe no text.png"
 use that as the basic layout
 
 ------------------------------------------------------
@@ -17,7 +17,7 @@ there is some text written on this image.. so make sure not to just use the imag
 
 add a small scroll indicator which is subtle and which indicates that the website is to be scrolled.. there sould be snapping so that  when the user scolls, the ###2 part gets out of the frame and just the rest is visible.. well as much can be displayed considering the screen size of the user.
 
-the image to be used is "./images/2/1st home page.png"
+the image to be used is "./assets/2/1st home page.png"
 
 use the heading and subheading from the image itself
 just one change.. in the body or the content it says "MBA student" change it to "IMBA student"
@@ -43,7 +43,7 @@ this is the about me section. when in screen, it should get bold in the navbar
 ## Anubhav
 -An IMBA student at BIT Mesra who enjoys understanding what drives customers and how brands create meaningful connections with their audience. I have a keen interest in marketing strategy, consumer behaviour, market research, economics, and brand communication.
 
-and use the image located at "./3/images/photo.jpg"
+and use the image located at "./assets/3/photo.jpg"
 
 there is another section to this part.. the one on the right side of the line
 it is the skills part
@@ -71,7 +71,7 @@ Soft skills should include
 
 here insert logos of softwares by fetching then from the web
 
-use the image at "images/wireframe/Annotated Portfolio Website Wireframe.png" for context and placement
+use the image at "assets/wireframe/Annotated Portfolio Website Wireframe.png" for context and placement
 
 
 
@@ -87,18 +87,18 @@ here the cards should include
 ## BIT Mesra
 # IMBA (expected 2025 - 2030)
  - CGPA : 
-use the image at "./images/4/bit.png"
+use the image at "./assets/4/bit.png"
 
 ## Jawahar Vidya Mandir 
 # 12th (CBSE) (2025)
 -88%
-use the image at "./images/4/JVM.png"
+use the image at "./assets/4/JVM.png"
 
 
 ## Kairali School
 # till 10th (2023)
 -90.4%
-use the image at "./images/4/kairali.png"
+use the image at "./assets/4/kairali.png"
 
 ignore the blue text with the arrow
 -----------------------------------------------------------------------
@@ -153,7 +153,7 @@ for the credentials use
 -Ranchi, India
 -https://www.linkedin.com/in/anu13hav/
 
-make sure to align the logo with the correct credential using the template "./images/wireframe/wireframe no text.png"
+make sure to align the logo with the correct credential using the template "./assets/wireframe/wireframe no text.png"
 "
 
 
