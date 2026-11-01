@@ -17,7 +17,7 @@ there is some text written on this image.. so make sure not to just use the imag
 
 add a small scroll indicator which is subtle and which indicates that the website is to be scrolled.. there sould be snapping so that  when the user scolls, the ###2 part gets out of the frame and just the rest is visible.. well as much can be displayed considering the screen size of the user.
 
-the image to be used is "./assets/2/1st home page.png"
+the image to be used is "./assets/hero/1st home page.png"
 
 use the heading and subheading from the image itself
 just one change.. in the body or the content it says "MBA student" change it to "IMBA student"
@@ -43,7 +43,7 @@ this is the about me section. when in screen, it should get bold in the navbar
 ## Anubhav
 -An IMBA student at BIT Mesra who enjoys understanding what drives customers and how brands create meaningful connections with their audience. I have a keen interest in marketing strategy, consumer behaviour, market research, economics, and brand communication.
 
-and use the image located at "./assets/3/photo.jpg"
+and use the image located at "./assets/about/photo.jpg"
 
 there is another section to this part.. the one on the right side of the line
 it is the skills part
@@ -57,7 +57,7 @@ Hard skills sould include
 
 -MS Excel (Advanced)
 -Ms Powerpoint (Intermediate)
--Ms Word (Advaned)
+-Ms Word (Intermediate)
 -Tally Prime (Basic)
 
 Soft skills should include 
@@ -87,23 +87,28 @@ here the cards should include
 ## BIT Mesra
 # IMBA (expected 2025 - 2030)
  - CGPA : 
-use the image at "./assets/4/bit.png"
+use the image at "./assets/education/bit.png"
 
 ## Jawahar Vidya Mandir 
 # 12th (CBSE) (2025)
 -88%
-use the image at "./assets/4/JVM.png"
+use the image at "./assets/education/JVM.png"
 
 
 ## Kairali School
 # till 10th (2023)
 -90.4%
-use the image at "./assets/4/kairali.png"
+use the image at "./assets/education/kairali.png"
 
 ignore the blue text with the arrow
 -----------------------------------------------------------------------
 ### 5
-this is the Co - curricular section 
+this is the Co - curricular section 
+
+Divided into 2 columns (70% - 30% split):
+- Left (70%): Events
+- Right (30%): Clubs and Society: SIME (Society for Industrial Management and Engineering) [Oct 2026 – Present]
+  Teams: Research, Event Management, PR
 
 Here, the 2 timelines shoud be as follows
 
@@ -115,7 +120,7 @@ Here, the 2 timelines shoud be as follows
 
 	the image will be provided later
 
-2026 | ## BTRIX'25
+2026 | ## BTRIX'26
 	# Participant
 	- The Event of the Department of Management at BIT Mesra
 	- Earned the title of “Brand Weaver” in MAD SQUAD
