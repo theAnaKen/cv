@@ -560,6 +560,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     revealElements.forEach(el => revealObserver.observe(el));
+
+    // Internal scroll observer for .events-scroll-container
+    const eventsScrollBox = document.querySelector('.events-scroll-container');
+    if (eventsScrollBox) {
+      const internalObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-revealed');
+          }
+        });
+      }, {
+        root: eventsScrollBox,
+        threshold: 0.1
+      });
+      eventsScrollBox.querySelectorAll('.scroll-reveal').forEach(el => internalObserver.observe(el));
+    }
   } else {
     revealElements.forEach(el => el.classList.add('is-revealed'));
   }

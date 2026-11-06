@@ -1850,10 +1850,44 @@ p.nl-wrap {
   flex-direction: column;
 }
 
+
+/* Scrollable Events Container (Max Display Height with Custom Scrollbar) */
+.events-scroll-container {
+  max-height: 85vh;
+  max-height: 85dvh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 0.85rem;
+  padding-left: 0.25rem;
+  padding-top: 0.25rem;
+  padding-bottom: 1.25rem;
+  margin-top: 0.75rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) transparent;
+}
+
+.events-scroll-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.events-scroll-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.events-scroll-container::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: var(--radius-full);
+}
+
+.events-scroll-container::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
 .cocurricular-events-col .timeline-container {
-  margin: 1.5rem 0 0;
+  margin: 0.5rem 0 0;
   max-width: 100%;
 }
+
 
 /* Clubs & Society Card */
 .club-card {
