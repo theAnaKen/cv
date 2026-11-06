@@ -115,8 +115,7 @@ Here, the 2 timelines shoud be as follows
 2026  | ## Internico'26
 	# volunteer
 	- Organised By The Academic Forum(TAF) 
-	- Organised at The Department Of Management at BIT Mesra
-	- Held on 24 September 2026 
+	- Organised at The Department Of Management at BIT Mesra 
 
 	the image will be provided later
 
@@ -133,7 +132,7 @@ Here, the 2 timelines shoud be as follows
 	# Volunteer
 	- Food Fest 2k26
 	- Organised by the Department of Management, BIT Mesra
-	- Held on 5th Nov
+	- Was part of event management and also looked after the games section
 	- Certificate: assets/events/blackout.jpeg
 ----------------------------------------------------------------------------------
 ### 6
